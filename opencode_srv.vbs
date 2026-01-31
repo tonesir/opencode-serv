@@ -187,8 +187,8 @@ Function IsProcessRunning(pid)
 End Function
 
 Sub StartService()
-    WriteLog "Executing command: opencode serve --port " & targetPort
-    shell.Run "cmd /c opencode serve --port " & targetPort, 0, False
+    WriteLog "Executing command: opencode serve --hostname 0.0.0.0 --port " & targetPort
+    shell.Run "cmd /c opencode serve --hostname 0.0.0.0 --port " & targetPort, 0, False
     
     WriteLog "Starting post-launch verification..."
     Dim i, isUp
